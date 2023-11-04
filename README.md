@@ -41,29 +41,18 @@ Before you start, make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/django-ecommerce-web.git
 
+    cd django-ecommerce-web
 
+    virtualenv venv
 
+    source venv/bin/activate  # On Windows, use: venv\Scripts\activate
 
+    cd django-ecommerce-web
 
-cd django-ecommerce-web
+    pip install -r requirements.txt
 
+    python manage.py migrate
 
-virtualenv venv
+    python manage.py createsuperuser
 
-
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-
-
-cd django-ecommerce-web
-
-
-pip install -r requirements.txt
-
-
-python manage.py migrate
-
-
-python manage.py createsuperuser
-
-
-python manage.py runserver
+    python manage.py runserver
