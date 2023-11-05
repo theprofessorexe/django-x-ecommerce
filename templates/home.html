@@ -17,17 +17,21 @@
 
   <!-- Categories Section Begin -->
   <section class="categories">
+   
     <div class="container">
         <div class="row">
             <div class="categories__slider owl-carousel">
+                {% for category in categories %}
                 <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="{% static "img/categories/cat-1.jpg" %}">
-                        <h5><a href="#">Fresh Fruit</a></h5>
+                    <div class="categories__item set-bg" data-setbg="{{ category.category_image.url }}">
+                        <h5><a href="#">{{category.category_name}}</a></h5>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+    
 </section>
 <!-- Categories Section End -->
 
