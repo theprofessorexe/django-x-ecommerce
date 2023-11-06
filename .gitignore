@@ -76,7 +76,7 @@ cover/
 env/
 db.sqlite3
 .accesstoken
-
+*.pyc
 
 # Flask stuff:
 instance/

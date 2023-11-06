@@ -13,6 +13,7 @@ admin.site.register(Category, CategoryAdmin)
 
 
 class ProductAdmin(admin.ModelAdmin):
+    form = ProductForm
     list_display = ('product_name', 'product_price', 'product_category', 'stock_quantity', 'stock_unit', 'modified_date', 'created_date',  'is_available',)
     list_filter = ('product_category', 'is_available')
     list_editable = ("is_available",)
